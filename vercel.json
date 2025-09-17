@@ -5,14 +5,14 @@
       "src": "public/index.php",
       "use": "@vercel/php",
       "config": {
-        "runtime": "php8.2" // 請根據你的實際 PHP 版本調整
+        "runtime": "php8.2" 
       }
     }
   ],
   "rewrites": [
     {
-      "source": "/(.*)", // 捕獲所有請求
-      "destination": "/public/index.php" // 將所有請求重寫到 public/index.php 處理
+      "source": "/(.*)", 
+      "destination": "/public/index.php" 
     }
   ],
   "framework": "other"
