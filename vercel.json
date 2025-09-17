@@ -13,10 +13,10 @@
   ],
   "builds": [
     {
-      "src": "api/**/*.php",
-      "use": "@vercel/php",
+      "src": "composer.json",
+      "use": "@vercel/builder-library",
       "config": {
-        "runtime": "php8.2" // 確保 PHP 版本與您本地開發時一致
+        "command": "composer install --prefer-dist --no-dev --optimize-autoloader"
       }
     }
   ]
