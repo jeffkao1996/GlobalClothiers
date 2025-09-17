@@ -1,18 +1,23 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/**/*.php", 
-      "use": "@vercel/php",
-      "config": {
-        "runtime": "php8.2" 
-      }
+  "functions": {
+    "api/**/*.php": {
+      "runtime": "vercel-php@0.7.4"
     }
-  ],
+  },
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/api/index.php" 
+      "dest": "/api/index.php"
+    }
+  ],
+  "builds": [
+    {
+      "src": "api/**/*.php",
+      "use": "@vercel/php",
+      "config": {
+        "runtime": "php8.2" // 確保 PHP 版本與您本地開發時一致
+      }
     }
   ]
 }
