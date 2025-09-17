@@ -1,0 +1,26 @@
+{
+    "name": "jeffkao1996/globalclothiers",
+    "description": "Global Clothiers Project",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jeffkao1996",
+            "email": "your.email@example.com"
+        }
+    ],
+    "require": {}, // 這裡會列出你的依賴
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/" // 假設你的類別在 src 資料夾，可自行調整
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            // 可以在這裡添加部署時需要的腳本，例如 php artisan cache:clear
+        ],
+        "post-update-cmd": [
+            // 類似 post-install-cmd
+        ]
+    }
+}
