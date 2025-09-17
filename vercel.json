@@ -5,17 +5,16 @@
       "src": "public/index.php",
       "use": "@vercel/php",
       "config": {
-        "runtime": "php8.2" // 請根據你的實際 PHP 版本調整
+        "runtime": "php8.2"
       }
     }
   ],
   "routes": [
     {
-      "src": "/(.*)", // 捕獲所有請求
-      "dest": "/public/index.php" // 將所有請求導向 public/index.php 處理
+      "src": "/(.*)",
+      "dest": "/public/index.php"
     }
   ],
-  // "functions" 區塊在 Vercel 2.0 中不再是必需的，builds 和 routes 已經足夠
-  // "trailingSlash": false, // 如果不需要，可以保留
-  "framework": "other" // 這裡標明為 other 更準確
+  "framework": "other",
+  "trailingSlash": false
 }
