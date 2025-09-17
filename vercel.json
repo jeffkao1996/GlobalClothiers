@@ -10,14 +10,5 @@
       "src": "/(.*)",
       "dest": "/api/index.php"
     }
-  ],
-  "builds": [
-    {
-      "src": "composer.json",
-      "use": "@vercel/builder-library",
-      "config": {
-        "command": "composer install --prefer-dist --no-dev --optimize-autoloader"
-      }
-    }
   ]
 }
