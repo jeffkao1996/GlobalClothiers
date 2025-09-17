@@ -5,21 +5,17 @@
       "src": "public/index.php",
       "use": "@vercel/php",
       "config": {
-        "runtime": "php8.2" // 或你專案使用的 PHP 版本，例如 php8.1, php8.3
+        "runtime": "php8.2" // 請根據你的實際 PHP 版本調整
       }
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/public/index.php"
+      "src": "/(.*)", // 捕獲所有請求
+      "dest": "/public/index.php" // 將所有請求導向 public/index.php 處理
     }
   ],
-  "functions": {
-    "public/index.php": {
-      "runtime": "php8.2" // 確保 runtime 版本一致
-    }
-  },
-  "trailingSlash": false,
-  "framework": "laravel" // 雖然 Vercel 可能不會直接用這個，但標明一下有幫助
+  // "functions" 區塊在 Vercel 2.0 中不再是必需的，builds 和 routes 已經足夠
+  // "trailingSlash": false, // 如果不需要，可以保留
+  "framework": "other" // 這裡標明為 other 更準確
 }
