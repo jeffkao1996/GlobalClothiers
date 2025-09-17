@@ -15,6 +15,6 @@
       "dest": "/public/index.php"
     }
   ],
-  "framework": "other",
+  "framework": "Other",
   "trailingSlash": false
 }
