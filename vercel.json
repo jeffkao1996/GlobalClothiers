@@ -1,19 +1,14 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/**/*.php",
-      "use": "@vercel/builders/rust", 
-      "config": {
-        "runtime": "php8.2" 
-      }
+  "functions": {
+    "api/**/*.php": {
+      "runtime": "vercel-php@0.7.4"
     }
-  ],
+  },
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/api/index.php" 
+      "dest": "/api/index.php"
     }
-  ],
-  "installCommand": "php -r \"copy('https://getcomposer.org/installer', 'composer-setup.php');\" && php composer-setup.php --install-dir=/usr/local/bin --filename=composer && php -r \"unlink('composer-setup.php');\" && composer install --prefer-dist --no-dev --optimize-autoloader"
+  ]
 }
