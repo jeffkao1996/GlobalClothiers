@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "public/index.php",
+      "use": "@vercel/php",
+      "config": {
+        "runtime": "php8.2" // 或你專案使用的 PHP 版本，例如 php8.1, php8.3
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/public/index.php"
+    }
+  ],
+  "functions": {
+    "public/index.php": {
+      "runtime": "php8.2" // 確保 runtime 版本一致
+    }
+  },
+  "trailingSlash": false,
+  "framework": "laravel" // 雖然 Vercel 可能不會直接用這個，但標明一下有幫助
+}
