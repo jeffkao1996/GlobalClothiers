@@ -9,15 +9,11 @@
       }
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*\\.(css|js|ico|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|eot))",
-      "dest": "$src" 
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/public/index.php" 
+      "source": "/(.*)",
+      "destination": "/public/index.php"
     }
   ],
-  "trailingSlash": false 
+  "trailingSlash": false
 }
