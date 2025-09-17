@@ -5,15 +5,19 @@
       "src": "public/index.php",
       "use": "@vercel/php",
       "config": {
-        "runtime": "php8.2" 
+        "runtime": "php8.2"
       }
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)", 
-      "destination": "/public/index.php" 
+      "src": "/(.*\\.(css|js|ico|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|eot))",
+      "dest": "$src" 
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/index.php" 
     }
   ],
-  "framework": "other"
+  "trailingSlash": false 
 }
