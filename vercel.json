@@ -3,16 +3,16 @@
   "builds": [
     {
       "src": "api/**/*.php",
-      "use": "@vercel/builders/rust", // 使用 Vercel 預設的 Rust builder 來處理 Serverless Functions
+      "use": "@vercel/builders/rust", 
       "config": {
-        "runtime": "php8.2" // 指定 PHP 版本
+        "runtime": "php8.2" 
       }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/api/index.php" // 確保您的 api/index.php 檔案存在，並能處理路由
+      "dest": "/api/index.php" 
     }
   ],
   "installCommand": "php -r \"copy('https://getcomposer.org/installer', 'composer-setup.php');\" && php composer-setup.php --install-dir=/usr/local/bin --filename=composer && php -r \"unlink('composer-setup.php');\" && composer install --prefer-dist --no-dev --optimize-autoloader"
